@@ -1,6 +1,6 @@
 #Run the Test for the Calculation File
 
-name: TestFunctionsOfCalculator.py
+name: test_Calculator
 
 on:
   #test run on pull or push on main branch

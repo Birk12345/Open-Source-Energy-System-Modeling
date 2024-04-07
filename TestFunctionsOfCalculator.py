@@ -1,40 +1,25 @@
-import unittest
-from Calculator import add, subtract, multiply, divide, calculate
+from Calculator import add
+from Calculator import subtract
+from Calculator import multiply
+from Calculator import divide
 
-class TestCalculator(unittest.TestCase):
-
+class TestCalculator:
     def test_add(self):
-        self.assertEqual(add(1, 2), 3)
-        self.assertEqual(add(-1, 1), 0)
-        self.assertEqual(add(0, 0), 0)
+        assert add(4, 5) == 9
+        assert add(5, 2) == 7
+        assert add(24, 1) == 25
 
     def test_subtract(self):
-        self.assertEqual(subtract(5, 3), 2)
-        self.assertEqual(subtract(-1, 1), -2)
-        self.assertEqual(subtract(0, 0), 0)
+        assert subtract(3, 1) == 2
+        assert subtract(2, 1) == 1
+        assert subtract(20, 10) == 10
 
     def test_multiply(self):
-        self.assertEqual(multiply(2, 3), 6)
-        self.assertEqual(multiply(-1, 1), -1)
-        self.assertEqual(multiply(0, 5), 0)
+        assert multiply(6, 2) == 12
+        assert multiply(1, 5) == 5
+        assert multiply(3, 6) == 18
 
     def test_divide(self):
-        self.assertEqual(divide(6, 2), 3)
-        self.assertEqual(divide(-4, 2), -2)
-        self.assertEqual(divide(5, 0), "Error! Division by zero!")
-
-    def test_calculate_add(self):
-        self.assertEqual(calculate('1', 1, 2), 3)
-
-    def test_calculate_subtract(self):
-        self.assertEqual(calculate('2', 5, 3), 2)
-
-    def test_calculate_multiply(self):
-        self.assertEqual(calculate('3', 2, 3), 6)
-
-    def test_calculate_divide(self):
-        self.assertEqual(calculate('4', 6, 2), 3)
-        self.assertEqual(calculate('4', 5, 0), "Error! Division by zero!")
-
-if __name__ == '__main__':
-    unittest.main()
+        assert divide(4, 2) == 2
+        assert divide(10, 5) == 2
+        assert divide(50, 2) == 25

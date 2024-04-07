@@ -12,4 +12,5 @@ def multiply(x, y):
 
 # Function to divide two numbers
 def divide(x, y):
-        return x / y
+    return x / y
+

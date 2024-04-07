@@ -1,0 +1,35 @@
+#Run the Test for the Calculation File
+
+name: Test_Calculation
+
+on:
+  #test run on pull or push on main branch
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  run-tests:
+
+    runs-on: ubuntu-latest #tests run on ubuntu
+
+    steps:
+
+    - uses: actions/checkout@v2
+
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v2
+      with:
+        # test use python 3.12
+        python-version: 3.12
+
+      #install pytest
+    - name: Install dependencies
+      run: pip install pytest
+
+      #test with pytest
+    - name: Test with pytest
+      run: pytest
+
+

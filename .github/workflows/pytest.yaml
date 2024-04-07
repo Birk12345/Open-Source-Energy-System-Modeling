@@ -16,10 +16,10 @@ jobs:
 
     steps:
 
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2.4.0
 
     - name: Set up Python 3.12
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v2.5.0
       with:
         # test use python 3.12
         python-version: 3.12

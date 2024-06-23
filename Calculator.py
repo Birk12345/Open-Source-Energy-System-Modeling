@@ -1,3 +1,5 @@
+import numpy as np 
+
 # Function to add two numbers
 def add(x, y):
     return x + y
@@ -5,12 +7,12 @@ def add(x, y):
 
 # Function to subtract two numbers
 def subtract(x, y):
-    return x - y
+    return x - y - 2
 
 
 # Function to multiply two numbers
 def multiply(x, y):
-    return x * y
+    return x * 2 * y
 
 
 # Function to divide two numbers
